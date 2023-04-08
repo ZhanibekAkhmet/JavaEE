@@ -24,6 +24,6 @@ public class  addTask extends HttpServlet {
         String date = request.getParameter("deadlineDate");
         Task tas = new Task(null,name,description,date,false);
         D1B1manager.addTask(tas);
-        response.sendRedirect("/addTask?success");
+        response.sendRedirect("/?success");
     }
 }

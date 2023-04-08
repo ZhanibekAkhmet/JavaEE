@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class SprintTask extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out=response.getWriter();
         ArrayList<Task> tasks= D1B1manager.getTasks();
         request.setAttribute("taski",tasks);
         request.getRequestDispatcher("/Tasks.jsp").forward(request,response);

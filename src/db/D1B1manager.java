@@ -1,7 +1,6 @@
 package db;
 
 import models.Task;
-import models.User;
 
 import java.util.ArrayList;
 
@@ -34,12 +33,13 @@ public class D1B1manager {
         }
     }
     public static void editTask(Long id,Task task){
+        int x=0;
         for (Task tas:tasks){
+            x=x+1;
             if(tas.getId().equals(id)){
-                tasks.remove(tas);
+                tasks.set(x-1,task);
                 break;
             }
         }
-        tasks.add(task);
     }
 }

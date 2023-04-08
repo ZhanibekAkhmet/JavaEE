@@ -5,7 +5,7 @@ public class Task {
     private String name;
     private String description;
     private String deadlineDate;
-     private boolean vipolneno;
+    private boolean vipolneno;
 
     public Task(Long id, String name, String description, String deadlineDate, boolean vipolneno) {
         this.id = id;

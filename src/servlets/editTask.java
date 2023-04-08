@@ -21,15 +21,7 @@ public class editTask extends HttpServlet {
         String description = request.getParameter("i_description");
         String deadLineDate = request.getParameter("i_deadLineDate");
         Long id = Long.parseLong(request.getParameter("id"));
-        Boolean vip ;
-        if (Boolean.parseBoolean("ee")) vip = true;
-        else vip = false;
-//        boolean vipolneno=false;
-//        if(vip.equals("YES")){
-//            vipolneno=true;
-//        } else if (vip.equals("NO")) {
-//            vipolneno=false;
-//        }
+        boolean vip = Boolean.parseBoolean(request.getParameter("status"));
         Task zadan = new Task(id,name,description,deadLineDate,vip);
         D1B1manager.editTask(id,zadan);
         response.sendRedirect("/SprintTask");
